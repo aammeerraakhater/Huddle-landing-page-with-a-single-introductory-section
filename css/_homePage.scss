@@ -1,0 +1,113 @@
+body{
+    padding: 40px 40px 70px 40px;
+    background-color:$violet ;
+    background-image:url('/images/bg-mobile.svg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+    color: #ffffff;
+    margin:0;
+
+    @media screen and(min-width:1024px)  {
+        background-image:url('/images/bg-desktop.svg');  
+        padding: 60px 80px 40px 80px
+    }
+}
+
+main{
+    margin-top:50px;
+    margin-bottom:60px;
+
+    @media screen and(min-width:1024px){
+      display:grid  ;
+      margin-bottom:26px;
+
+      grid-template-columns: repeat(2,minmax(250px, 1fr));
+    }
+}
+
+.textSection{
+
+    line-height: 1.75;
+    text-align:center;
+
+
+    @media screen and(min-width:1024px){
+        padding-left: 60px; 
+        text-align:left;
+
+    }
+}
+
+.imageSection{
+
+    @media screen and(max-width:1024px){
+        margin-bottom:70px;
+    }
+    img{
+        width:100%;
+
+    }
+}
+h1{
+    font-family:$titleFont;
+    font-size:22px;
+    font-weight: 700 ;
+    line-height: 1.5;
+
+    @media screen and(min-width:1024px){
+        font-size:32px;
+        line-height: 1.3;
+
+    }
+    }
+
+
+a.cta{
+   display:inline-block;
+    position:relative;
+    min-width:200px; 
+    margin-top:26px;
+    padding: 16px;
+    background: #ffffff;
+    color:$violet;
+    line-height:1px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px darken($violet,20%);
+    text-align:center;
+    transform: translateX(0px);
+    transition: transform 100ms ease-in-out;
+ 
+
+    @media screen and(min-width:1024px){
+        padding: 20px 66px ;
+
+    }
+    &:hover{
+        transform: translateY(30px);
+    }
+}
+footer{
+    display:flex;
+    justify-content: center;
+    
+
+    @media screen and(min-width:1024px){
+        justify-content: flex-end;
+    }
+    i.fab{
+
+        border:1px solid #ffffff;
+        width:40px;
+        height:40px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right:16px;
+
+        &:last-child{
+            margin-right:0px;
+        }
+    }
+}
